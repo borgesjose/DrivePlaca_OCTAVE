@@ -10,7 +10,7 @@
   % 5 é o numero de Bytes lidos pela função, cada byte é um caractere
   [read_data,count] = fread(SerPic, 5); %lendo os dados no PIC;
 
-  vel = str2double(char(read_data)); % tranforma os dadso em Double
+  vel = str2double(char(read_data)); % tranforma os dados em Double
 
 
   if vel > 80 % Checagem de erro se velocidade é positiva

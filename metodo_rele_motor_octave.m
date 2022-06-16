@@ -1,4 +1,14 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Universidade Federal do Piauí                       %
+% Campus Ministro Petronio Portela                    %
+% @author                                             %
+% @email                                              %
+%  Resposta ao Degrau em Malha Aberta                 %
+%                                                     %
+%  -- Version: x.x  - xx/xx/2022                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%Não fiz nenhuma alteração nesse código ele já era 100% compativel com octave
 
 
 %Código implementação Relé
@@ -21,13 +31,15 @@ Qde_amostras = 200; %Quantidade de amostras do gráfico
 for k=1:Qde_amostras
     ref(k)=20;
 end
+
 clf(figure(1));
 h = figure(1);
 hLine1 = line(nan, nan, 'Color','red');
 title('Implementação Controle Motor DC');
 xlabel('Tempo (s)');
 ylabel('Velocidade (RPS)');
- %Inicializa as variáveis gráficas
+
+%Inicializa as variáveis gráficas
   k=1;
   y(1)=0 ; y(2)=0; erro(1)=ref(1)-y(1); erro(2)=ref(2)-y(2); u(1)=0; u(2)=0;
   while k<2
@@ -36,7 +48,7 @@ ylabel('Velocidade (RPS)');
       k=1;
       x1 = [x1 k*Ts];
       y1 = [y1 y(k)];
-      set(hLine1, 'XData', x1, 'YData', y1);
+      set(hLine1, 'XData', x1, 'YData', y1); % atribuindo os vetores atualizados a figura h
       k=k+1;
   end
 u(1)=dh;

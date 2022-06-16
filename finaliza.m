@@ -3,6 +3,6 @@ pkg load instrument-control
 
 flushoutput(SerPic);
 fclose(SerPic);
-delete(SerPic);
+%delete(SerPic);
 
 clc;

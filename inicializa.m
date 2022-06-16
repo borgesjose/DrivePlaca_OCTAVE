@@ -9,6 +9,6 @@ SerPic = serial(porta); % Cria o objeto que sera utilizado na comunicação
 
 % Configurando a comunicação:
 
-set(SerPic, 'baudrate',115200 , 'bytesize',8 , 'parity','odd' , stopbits, 1, )
+set(SerPic,'baudrate',115200,'bytesize',8,'parity','odd', 'stopbits',1)
 
 fopen(SerPic);

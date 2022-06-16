@@ -1,5 +1,8 @@
 function x = set_pwm(duty)
   global SerPic
+  pkg load instrument-control
+
+
   fprintf(SerPic,'%c','p'); % Envia para o PIC o comando P
 
   %Saturação Superior
